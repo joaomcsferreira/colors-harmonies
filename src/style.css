@@ -1,3 +1,11 @@
+:root {
+    --font-main: 'Playfair Display', serif;
+    --font-sec: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --color-grey: #e5e5e5;
+    --color-grey-bold: #868686;
+    --color-light: #fff;;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -5,7 +13,7 @@
 
 body,
 html {
-    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-family: var(--font-sec)
 }
 
 .main {
@@ -14,12 +22,15 @@ html {
 }
 
 .group {
-    border: 1px solid #e5e5e5;
+    border-radius: 5px;
     padding: 20px;
     margin: 10px;
+    text-align: center;
+    background-color: var(--color-grey-bold);
 }
 
 .harmony {
+    margin-top: 10px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -32,6 +43,22 @@ html {
 
 .box-main {
     margin-bottom: 30px;
+}
+
+.color-cod {
+    display: flex;
+    justify-content: center;
+    line-height: 100px;
+    font-size: 0.8em;
+    font-style: italic;
+    font-weight: bold;
+}
+
+.sub-title {
+    font-family: var(--font-main);
+    font-size: 1.2em;
+    font-weight: 800;
+    color: var(--color-light);
 }
 
 input[type=range] {

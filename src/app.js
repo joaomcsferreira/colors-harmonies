@@ -3,24 +3,25 @@ let color = ['95', '85', '75', '65', '55', '45', '35', '25']
 
 function setColor() {
     let color_main = hInput.value
-    document.querySelector(".main .box-main").style.backgroundColor = `hsl(${hInput.value}, 75%, 50%)`
-
-    let monocromatic = document.querySelectorAll(".monocromatic .box")
-    let complimentary = document.querySelectorAll(".complimentary .box")
+    let box_main = document.querySelector(".main .box-main")
+    box_main.style.backgroundColor = `hsl(${hInput.value}, 75%, 50%)`
+    
+    let monochromatic = document.querySelectorAll(".monochromatic .box")
+    let complementary = document.querySelectorAll(".complementary .box")
     let analogous = document.querySelectorAll(".analogous .box")
-    let split_complimentary = document.querySelectorAll(".split-complimentary .box")
-    let triads = document.querySelectorAll(".triads .box")
-    let tetrad = document.querySelectorAll(".tetrad .box")
+    let split_complementary = document.querySelectorAll(".split-complementary .box")
+    let triadic = document.querySelectorAll(".triadic .box")
+    let tetradic = document.querySelectorAll(".tetradic .box")
 
 
     set_hsl_gradient(hInput, [hsl(0), hsl(60), hsl(120), hsl(180), hsl(300), hsl(360)])
 
-    alter_color_monocromatic(monocromatic, color_main)
-    alter_color_complimentary(complimentary, color_main)
+    alter_color_monochromatic(monochromatic, color_main)
+    alter_color_complementary(complementary, color_main)
     alter_color_analogous(analogous, color_main)
-    alter_color_split_complimentary(split_complimentary, color_main)
-    alter_color_triads(triads, color_main)
-    alter_color_tetrad(tetrad, color_main)
+    alter_color_split_complementary(split_complementary, color_main)
+    alter_color_triadic(triadic, color_main)
+    alter_color_tetradic(tetradic, color_main)
 }
 
 function hsl(h) {
@@ -41,10 +42,9 @@ function set_hsl_gradient(h, steps) {
 
 function set_cod_color(children, color, color_main) {
     children.innerHTML = hsl_to_rgb(color_main, 75, color)
-    children.style.color = `hsl(${color_main}, 100%, 0%)`
 }
 
-function alter_color_monocromatic(boxs, color_main) {
+function alter_color_monochromatic(boxs, color_main) {
     cont = 0
     
     boxs.forEach(div => {
@@ -72,7 +72,7 @@ function alter_color_analogous(boxs, color_main) {
     });
 }
 
-function alter_color_complimentary(boxs, color_main) {
+function alter_color_complementary(boxs, color_main) {
     cont = 0
 
     boxs.forEach(div => {
@@ -84,7 +84,7 @@ function alter_color_complimentary(boxs, color_main) {
     });
 }
 
-function alter_color_split_complimentary(boxs, color_main) {
+function alter_color_split_complementary(boxs, color_main) {
     cont = 0
 
     boxs.forEach(div => {
@@ -100,7 +100,7 @@ function alter_color_split_complimentary(boxs, color_main) {
     });
 }
 
-function alter_color_triads(boxs, color_main) {
+function alter_color_triadic(boxs, color_main) {
     cont = 0
 
     boxs.forEach(div => {
@@ -118,7 +118,7 @@ function alter_color_triads(boxs, color_main) {
     });
 }
 
-function alter_color_tetrad(boxs, color_main) {
+function alter_color_tetradic(boxs, color_main) {
     cont = 0
 
     boxs.forEach(div => {

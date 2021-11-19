@@ -4,20 +4,31 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link rel="stylesheet" href="src/style.css">
-    <title>Harmony of Colors</title>
+    <title>Color Schemes</title>
 </head>
 <body>
+    <header class="header">
+        <nav class="custom-navbar">
+            <div>
+                <a class="title-brand">Color Schemes</a>
+            </div>
+        </nav>
+    </header>
     <main class="main">
         <div class="hsl-input">
+            <span class="sub-title">
+                Select main color:
+            </span>
             <input type="range" id="h" min="0" max="360" oninput="setColor()">
             <br>
             <div class="box-main"></div>
         </div>
 
-        <div class="group monocromatic">
+        <div class="group monochromatic">
             <span class="sub-title">
-                Monocromatic
+                Monochromatic
             </span>
             <div class="harmony">
                 <div class="box">
@@ -79,9 +90,9 @@
             </div>
         </div>
 
-        <div class="group complimentary">
+        <div class="group complementary">
             <span class="sub-title">
-                Complimentary
+                Complementary
             </span>
             <div class="harmony">
                 <div class="box">
@@ -111,9 +122,9 @@
             </div>
         </div>
 
-        <div class="group split-complimentary">
+        <div class="group split-complementary">
             <span class="sub-title">
-                Split Complimentary
+                Split Complementary
             </span>
             <div class="harmony">
                 <div class="box">
@@ -143,9 +154,9 @@
             </div>
         </div>
 
-        <div class="group triads">
+        <div class="group triadic">
             <span class="sub-title">
-                Triads
+                Triadic
             </span>
             <div class="harmony">
                 <div class="box">
@@ -175,9 +186,9 @@
             </div>
         </div>
 
-        <div class="group tetrad">
+        <div class="group tetradic">
             <span class="sub-title">
-                Tetrad
+                Tetradicic
             </span>
             <div class="harmony">
                 <div class="box">
@@ -206,9 +217,27 @@
                 </div>
             </div>
         </div>
-
     </main>
 
+    <footer class="footer">
+        <div>
+            <span class="brand">Color Schemes ©</span>
+        </div>
+        <div class="social-media">
+            <ul>
+                <li>
+                    <a href="https://www.linkedin.com/in/joao-mcf/" target="_blank">
+                        <i class="fab fa-github icon"></i> Linkedin
+                    </a>
+                </li>
+                <li>
+                    <a href="https://github.com/Joao-MCF" target="_blank">
+                        <i class="fab fa-linkedin icon"></i> Github
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </footer>
     <script src="src/app.js"></script>
 </body>
 </html>

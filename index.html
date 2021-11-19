@@ -9,9 +9,11 @@
 </head>
 <body>
     <main class="main">
-        <input type="range" id="h" min="0" max="360" oninput="setColorFromHsl()">
-        <br>
-        <div class="box-main"></div>
+        <div class="hsl-input">
+            <input type="range" id="h" min="0" max="360" oninput="setColor()">
+            <br>
+            <div class="box-main"></div>
+        </div>
 
         <div class="group monocromatic">
             <span class="sub-title">

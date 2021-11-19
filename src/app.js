@@ -13,7 +13,7 @@ function setColor() {
     let tetrad = document.querySelectorAll(".tetrad .box")
 
 
-    setGradient(hInput, [hsl(0), hsl(60), hsl(120), hsl(180), hsl(300), hsl(360)])
+    set_hsl_gradient(hInput, [hsl(0), hsl(60), hsl(120), hsl(180), hsl(300), hsl(360)])
 
     alter_color_monocromatic(monocromatic, color_main)
     alter_color_complimentary(complimentary, color_main)
@@ -27,7 +27,7 @@ function hsl(h) {
     return `hsl(${h}, 75%, 50%)`
 }
 
-function setGradient(h, steps) {
+function set_hsl_gradient(h, steps) {
     gradientString = "linear-gradient(to right, "
 
     stepSize = 100 / (steps.length - 1)
@@ -37,10 +37,6 @@ function setGradient(h, steps) {
     }
 
     h.style.backgroundImage = gradientString + ")"
-}
-
-function setColorFromHsl() {
-    setColor()
 }
 
 function set_cod_color(children, color, color_main) {

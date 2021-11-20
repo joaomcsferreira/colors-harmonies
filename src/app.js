@@ -62,11 +62,11 @@ function alter_color_analogous(boxs, color_main) {
     boxs.forEach(div => {
         if( cont >= 4) {
             div.style.backgroundColor = `hsl(${color_main - 30}, 75%, ${color[cont]}%)`
+            set_cod_color(div.children[0], color[cont], color_main - 30)
         } else {
             div.style.backgroundColor = `hsl(${color_main - 330}, 75%, ${color[cont]}%)`
+            set_cod_color(div.children[0], color[cont], color_main - 330)
         }
-
-        set_cod_color(div.children[0], color[cont], color_main)
 
         cont++
     });
@@ -78,7 +78,7 @@ function alter_color_complementary(boxs, color_main) {
     boxs.forEach(div => {
         div.style.backgroundColor = `hsl(${color_main - 180}, 75%, ${color[cont]}%)`
         
-        set_cod_color(div.children[0], color[cont], color_main)
+        set_cod_color(div.children[0], color[cont], color_main - 180)
 
         cont++
     });
@@ -90,11 +90,11 @@ function alter_color_split_complementary(boxs, color_main) {
     boxs.forEach(div => {
         if( cont >= 4) {
             div.style.backgroundColor = `hsl(${(color_main - 180) - 30}, 75%, ${color[cont]}%)`
+            set_cod_color(div.children[0], color[cont], color_main - 210)
         } else {
             div.style.backgroundColor = `hsl(${(color_main - 180) + 30}, 75%, ${color[cont]}%)`
+            set_cod_color(div.children[0], color[cont], color_main - 150)
         }
-
-        set_cod_color(div.children[0], color[cont], color_main)
 
         cont++
     });
@@ -106,13 +106,14 @@ function alter_color_triadic(boxs, color_main) {
     boxs.forEach(div => {
         if( cont < 3) {
             div.style.backgroundColor = `hsl(${color_main - 120}, 75%, ${color[cont]}%)`
+            set_cod_color(div.children[0], color[cont], color_main - 120)
         } else if( cont < 6 ) {
             div.style.backgroundColor = `hsl(${color_main}, 75%, ${color[cont]}%)`
+            set_cod_color(div.children[0], color[cont], color_main)
         } else {
-            div.style.backgroundColor = `hsl(${color_main - 240}, 50%, ${color[cont]}%)`
+            div.style.backgroundColor = `hsl(${color_main - 240}, 75%, ${color[cont]}%)`
+            set_cod_color(div.children[0], color[cont], color_main - 240)
         }
-
-        set_cod_color(div.children[0], color[cont], color_main)
 
         cont++
     });
@@ -123,16 +124,18 @@ function alter_color_tetradic(boxs, color_main) {
 
     boxs.forEach(div => {
         if( cont < 2 ) {
-            div.style.backgroundColor = `hsl(${color_main - 80}, 90%, ${color[cont]}%)`
+            div.style.backgroundColor = `hsl(${color_main - 80}, 75%, ${color[cont]}%)`
+            set_cod_color(div.children[0], color[cont], color_main - 80)
         } else if( cont < 4 ) {
-            div.style.backgroundColor = `hsl(${color_main}, 90%, ${color[cont]}%)`
+            div.style.backgroundColor = `hsl(${color_main}, 75%, ${color[cont]}%)`
+            set_cod_color(div.children[0], color[cont], color_main)
         } else if( cont < 6 ){
-            div.style.backgroundColor = `hsl(${color_main - 160}, 50%, ${color[cont]}%)`
+            div.style.backgroundColor = `hsl(${color_main - 160}, 75%, ${color[cont]}%)`
+            set_cod_color(div.children[0], color[cont], color_main - 160)
         } else {
-            div.style.backgroundColor = `hsl(${color_main - 240}, 50%, ${color[cont]}%)`            
+            div.style.backgroundColor = `hsl(${color_main - 240}, 75%, ${color[cont]}%)`
+            set_cod_color(div.children[0], color[cont], color_main - 240)            
         }
-
-        set_cod_color(div.children[0], color[cont], color_main)
         
         cont++
     });
